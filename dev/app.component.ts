@@ -10,6 +10,11 @@ import {Component} from 'angular2/core';
             #inputElement
             [ngClass]="{red: true}">
         <p>{{values}}</p>
+        <br />
+        <br />
+        <input type="text" [(ngModel)]="name">
+        <p>Your name: {{name}}</p>
+        
         
     `,
 })
