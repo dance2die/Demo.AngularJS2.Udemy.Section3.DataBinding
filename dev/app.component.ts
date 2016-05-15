@@ -3,10 +3,14 @@ import {Component} from 'angular2/core';
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Angular 2 Boilerplate</h1>
-        <p>Hello World!</p>
+        {{onTest()}}
+        <input type="text" [value]="name" [disabled]="1 === 1" [ngClass]="{red: true}">
     `,
 })
 export class AppComponent {
+    name = "Max";
 
+    onTest(){
+        return 1 === 1;
+    }
 }
