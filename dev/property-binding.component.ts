@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
     selector: 'my-property-binding',
@@ -6,9 +6,9 @@ import {Component} from 'angular2/core';
         <h2>This is the child component</h2>
         <p>Hey {{name}}! and {{age}} years old</p>
     `,
-    inputs: ['name:myName', 'age:myAge']
+    inputs: ['name:myName']
 })
 export class PropertyBindingComponent{
     name = '';
-    age = '';
+    @Input('myAge') age = '';
 }
